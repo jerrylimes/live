@@ -1,0 +1,93 @@
+/* 
+    Author: Jerry Li
+    Date: 2025-03-22
+    Version: 0.1
+*/
+
+#logo-wrapper-link {
+    width: fit-content;
+    position: fixed;
+    left: 5%;
+    top: 20px;
+    z-index: 1;
+}
+
+#logo-wrapper {
+    width: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 0.2s;
+    border: solid 1px transparent;
+    background-color: white;
+}
+
+#logo-wrapper:hover {
+    border-color: #eee;
+}
+
+#logo {
+    height: 30px;
+    aspect-ratio: 223/100;
+    background-image: url(../images/home-button-light.svg);
+}
+
+#content-unit {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 80px;
+    overflow: hidden;
+}
+
+#text-n {
+    font-family: "Baskerville", Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+#i-h {
+    font-family: "Baskerville", Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+#index-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 0.5fr;
+    column-gap: 15px;
+}
+
+.i-g-card {
+    height: 300px;
+    margin-bottom: 15px;
+    border: solid 1px #eee;
+    border-radius: 10px;
+    padding-left: 14px;
+    padding-right: 14px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.i-g-card p{
+    margin-top: 14px;
+}
+
+#i-g-card-1{
+    background-image: url(../images/large_2x.jpg);
+    background-size: 300%;
+    background-color: #F5F5F7;
+}
+
+#i-g-card-2{
+    background-image: url(../images/Frame-8.png);
+    background-size: cover;
+    background-position: center bottom;
+    color: white;
+}
+
+#i-g-card-3{
+    background-image: url(../images/截图\ 2025-03-26\ 23.00.38.png);
+}
+
+#i-g-card-4{
+    background-image: url(../images/Snipaste_2025-03-26_23-09-21.png);
+    background-position: left center;
+}
