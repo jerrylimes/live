@@ -106,10 +106,10 @@ body {
 .news-entry::after {
     content: "";
     position: absolute;
-    left: 5%;
+    left: 10px;
     bottom: 0;
     height: 1px;
-    width: 90%;
+    width: calc(100% - 20px);
     background-color: #6C91D9;
 }
 
