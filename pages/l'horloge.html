@@ -1,0 +1,28 @@
+<div id="content-unit">
+    <div id="wrapper">
+        <span id="today"></span>
+        <div id="digital-clock">
+            <span id="hour"></span>
+            <span id="minute"></span>
+            <span id="second"></span>
+        </div>
+    </div>
+</div>
+<script>
+    function ticktock() {
+        const currentTime = new Date();
+        const today = currentTime.getDate();
+        const month = (currentTime.getMonth() + 1).toString();
+        const hour = currentTime.getHours().toString().padStart(2, '0');
+        const minute = currentTime.getMinutes().toString().padStart(2, '0');
+        const second = currentTime.getSeconds().toString().padStart(2, '0');
+        document.getElementById("today").innerText = month + " / " + today;
+        document.getElementById("hour").innerText = hour + ":";
+        document.getElementById("minute").innerText = minute + ":";
+        document.getElementById("second").innerText = second;
+    }
+
+    setInterval(() => {
+        ticktock();
+    }, 1000);
+</script>
