@@ -1,41 +1,79 @@
 {% extends "page.html" %}
 
 {% block content %}
-<script>
-    $(document).ready(function () {
-        $('#news-heading').on('click', function (e) {
-            e.preventDefault(); // prevent default anchor behavior
-            $('.news-details').toggleClass("active"); // or .show(), or .fadeIn()
-        });
-    });
-</script>
+
 <div id="content-unit">
     <div class="news-entry">
-        <p id="news-heading">Lorde teases new music!</p>
+        <span id="news-heading">#WWDC25</span>
+        <span class="news-date">6/9/2025, in
+            <span id="days-b"></span>
+            <span id="hours-b"></span>
+            <span id="minutes-b"></span>
+            <span id="seconds-b"></span>
+        </span>
+    </div>
+    <div class="news-entry">
+        <span id="news-heading">Lana Del Rey releases new single <i>Henry, come on</i></span>
+        <span class="news-date">4/11/2025, in
+            <span id="days"></span>
+            <span id="hours"></span>
+            <span id="minutes"></span>
+            <span id="seconds"></span>
+        </span>
+    </div>
+    <div class="news-entry">
+        <a href="./pages/gallery.html"><span id="news-heading">Lorde teases new music!</span></a>
         <span class="news-date">4/9/2025</span>
-        <div class="news-details">
-            <blockquote class="twitter-tweet" data-media-max-width="560">
-                <p lang="zxx" dir="ltr"><a href="https://t.co/UL1Q6h9ded">pic.twitter.com/UL1Q6h9ded</a></p>&mdash;
-                media
-                (@entplus_) <a href="https://twitter.com/entplus_/status/1910010806839755208?ref_src=twsrc%5Etfw">April
-                    9,
-                    2025</a>
-            </blockquote>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
     </div>
     <div class="news-entry">
-        <p id="news-heading">WWDC25 announced</p>
+        <span id="news-heading">WWDC25 announced</span>
         <span class="news-date">3/25/2025</span>
     </div>
     <div class="news-entry">
-        <p id="news-heading">eternal sunshine deluxe releases Mar 28</p>
+        <span id="news-heading">eternal sunshine deluxe releases Mar 28</span>
         <span class="news-date">3/25/2025</span>
     </div>
     <div class="news-entry">
-        <p id="news-heading">OpenAI unveils enhanced image generation capabilities in ChatGPT</p>
+        <span id="news-heading">OpenAI unveils enhanced image generation capabilities in ChatGPT</span>
         <span class="news-date">3/25/2025</span>
     </div>
 
 </div>
+
+<script>
+    const currentTime = new Date();
+
+    function updateTime() {
+        const targetDate = new Date("April 11, 2025 00:00:00").getTime();
+        const now = new Date().getTime();
+        const timeDifference = targetDate - now;
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+        document.getElementById("days").textContent = Math.abs(days) + " days";
+        document.getElementById("hours").textContent = Math.abs(hours) + " hours";
+        document.getElementById("minutes").textContent = Math.abs(minutes) + " minutes";
+        document.getElementById("seconds").textContent = Math.abs(seconds) + " seconds";
+    }
+
+    function updateTime_b() {
+        const targetDate = new Date("June 9, 2025 00:00:00").getTime();
+        const now = new Date().getTime();
+        const timeDifference = targetDate - now;
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+        document.getElementById("days-b").textContent = Math.abs(days) + " days";
+        document.getElementById("hours-b").textContent = Math.abs(hours) + " hours";
+        document.getElementById("minutes-b").textContent = Math.abs(minutes) + " minutes";
+        document.getElementById("seconds-b").textContent = Math.abs(seconds) + " seconds";
+    }
+
+    setInterval(() => {
+        updateTime();
+        updateTime_b();
+    }, 1000);
+</script>
 {% endblock %}
