@@ -248,7 +248,8 @@ a:hover {
     font-size: 42vh;
 }
 
-#second, #second-colon {
+#second,
+#second-colon {
     color: #adadad;
 }
 
@@ -266,6 +267,10 @@ a:hover {
     #news-entries,
     #news-live {
         width: 100%;
+    }
+
+    #digital-clock {
+        font-size: 20vw;
     }
 
     #hour,
