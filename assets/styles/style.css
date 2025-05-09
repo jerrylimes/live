@@ -420,24 +420,6 @@ svg {
     align-items: center;
 }
 
-@media (prefers-color-scheme: dark) {
-
-    #logo-wrapper,
-    #inx-light,
-    .inx-special-link #i-courses .inx-text,
-    #return {
-        background-color: #012030 !important;
-    }
-
-    .news-entry:hover {
-        background-color: hsl(220, 59%, 24%);
-    }
-
-    svg {
-        fill: white;
-    }
-}
-
 #wrapper {
     width: 100%;
     height: calc(100vh - 100px);
