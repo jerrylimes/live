@@ -205,13 +205,13 @@ svg {
 
     #top-info.active {
         color: #fff;
-        background-color: #232323;
+        background-color: hsl(200, 96%, 8%);
     }
 
     .top-button:hover,
     #home:hover,
     #top-card:hover {
-        background-color: #232323;
+        background-color: hsl(200, 96%, 8%);
     }
 
     #ext,
@@ -220,7 +220,7 @@ svg {
     #top-card,
     #greeting,
     #inquiry {
-        background-color: #000000;
+        background-color: #012030;
     }
 
     #top-card {
@@ -306,6 +306,10 @@ svg {
     src: url(../fonts/DS-DIGII.TTF);
 }
 
+#content-unit svg {
+    height: 0.7em;
+}
+
 #return {
     width: 30px;
     height: 30px;
@@ -343,7 +347,7 @@ svg {
     text-align: justify;
 }
 
-#inx-light {
+#backlight {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -353,18 +357,15 @@ svg {
     background-color: #eef1f4;
 }
 
-#live-grid {
-    display: flex;
-}
-
 #news-entries {
-    width: 70%;
+    width: 100%;
     transition: all 0.2s;
 }
 
 #news-live {
-    width: 30%;
+    width: 100%;
     transition: all 0.2s;
+    display: flex;
 }
 
 .news-entry {
@@ -429,10 +430,10 @@ svg {
 }
 
 #digital-clock {
-    font-family: 'Space Mono', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Digital', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     white-space: nowrap;
     overflow: hidden;
-    font-size: 32vh;
+    font-size: 42vh;
 }
 
 #horloge-second,
@@ -464,5 +465,19 @@ svg {
     #minute,
     #horloge-second {
         font-size: 20vw;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #backlight {
+        background-color: #012030 !important;
+    }
+
+    .news-entry:hover {
+        background-color: hsla(211, 13%, 52%, 0.5);
+    }
+
+    svg {
+        fill: white;
     }
 }
