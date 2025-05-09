@@ -105,7 +105,8 @@ svg {
     background-image: url(../images/logo-button-light.svg);
 }
 
-#ext, #inquiry{
+#ext,
+#inquiry {
     transform: translateY(0px);
     scale: 100%;
     transition: all 0.3s cubic-bezier(0.65, 0, 0, 1.25);
@@ -113,7 +114,8 @@ svg {
     border-radius: 10px;
 }
 
-#ext.hide, #inquiry.hide{
+#ext.hide,
+#inquiry.hide {
     scale: 90%;
     transform: translateY(-60px);
 }
@@ -212,11 +214,16 @@ svg {
         background-color: #232323;
     }
 
-    #ext, #greet, #clock, #top-card, #greeting, #inquiry{
+    #ext,
+    #greet,
+    #clock,
+    #top-card,
+    #greeting,
+    #inquiry {
         background-color: #000000;
     }
 
-    #top-card{
+    #top-card {
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
     }
@@ -229,12 +236,13 @@ svg {
         display: none;
     }
 
-    #greet, #inquiry{
+    #greet,
+    #inquiry {
         border-radius: 10px !important;
     }
 }
 
-#content-unit{
+#content-unit {
     margin-left: 12px;
     margin-right: 12px;
     margin-top: 60px;
@@ -244,4 +252,235 @@ svg {
     font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
     text-align: justify;
+}
+
+@font-face {
+    font-family: 'Source Han Sans';
+    font-weight: normal;
+    src: url(../fonts/SourceHanSansCN-Regular-min.woff2);
+}
+
+@font-face {
+    font-family: 'Source Han Sans';
+    font-weight: bold;
+    src: url(../fonts/SourceHanSansCN-Bold-min.woff2);
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    font-style: normal;
+    src: url(../fonts/helvetica-neue-5/HelveticaNeueRoman.otf);
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-weight: 100;
+    font-style: normal;
+    src: url(../fonts/helvetica-neue-5/HelveticaNeueLight.otf);
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-weight: 700;
+    font-style: normal;
+    src: url(../fonts/helvetica-neue-5/HelveticaNeueBold.otf);
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-weight: 800;
+    font-style: normal;
+    src: url(../fonts/helvetica-neue-5/HelveticaNeueHeavy.otf);
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-weight: 900;
+    font-style: normal;
+    src: url(../fonts/helvetica-neue-5/HelveticaNeueBlack.otf);
+}
+
+@font-face {
+    font-family: 'Digital';
+    src: url(../fonts/DS-DIGII.TTF);
+}
+
+#return {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    left: calc(5% + 90px);
+    top: 20px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 0.2s;
+    border: solid 1px transparent;
+    background-color: rgba(238, 241, 244, 0.75);
+    backdrop-filter: blur(12px);
+    border-color: #6C91D9;
+}
+
+#return svg {
+    height: 20px;
+    fill: #6C91D9;
+}
+
+#content-unit {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 80px;
+    overflow: hidden;
+}
+
+#text-n {
+    font-family: 'Geist', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    text-align: justify;
+}
+
+#inx-light {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #eef1f4;
+}
+
+#live-grid {
+    display: flex;
+}
+
+#news-entries {
+    width: 70%;
+    transition: all 0.2s;
+}
+
+#news-live {
+    width: 30%;
+    transition: all 0.2s;
+}
+
+.news-entry {
+    padding: 10px;
+    overflow: hidden;
+    transition: background-color 0.2s;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-entry::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    height: 1px;
+    width: calc(100% - 20px);
+    background-color: #6c90d990;
+}
+
+.news-entry:hover {
+    background-color: hsl(210, 21%, 85%);
+
+}
+
+#news-heading {
+    font-family: 'Geist', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.news-details {
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 10px;
+    border: solid 1px #6C91D9;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.news-date,
+.pinned {
+    font-family: 'Geist', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+.pinned {
+    display: flex;
+    align-items: center;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    #logo-wrapper,
+    #inx-light,
+    .inx-special-link #i-courses .inx-text,
+    #return {
+        background-color: #012030 !important;
+    }
+
+    .news-entry:hover {
+        background-color: hsl(220, 59%, 24%);
+    }
+
+    svg {
+        fill: white;
+    }
+}
+
+#wrapper {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#digital-clock {
+    font-family: 'Digital', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 42vh;
+}
+
+#second,
+#second-colon {
+    color: #adadad;
+}
+
+#today,
+#month {
+    font-family: 'Digital', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 50px;
+}
+
+@media (max-width: 430px) {
+    #live-grid {
+        flex-direction: column;
+    }
+
+    #news-entries,
+    #news-live {
+        width: 100%;
+    }
+
+    #digital-clock {
+        font-size: 20vw;
+    }
+
+    #hour,
+    #minute,
+    #second {
+        font-size: 20vw;
+    }
 }
