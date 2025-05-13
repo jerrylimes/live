@@ -254,18 +254,6 @@ svg {
 /* live styles */
 
 @font-face {
-    font-family: 'Source Han Sans';
-    font-weight: normal;
-    src: url(../fonts/SourceHanSansCN-Regular-min.woff2);
-}
-
-@font-face {
-    font-family: 'Source Han Sans';
-    font-weight: bold;
-    src: url(../fonts/SourceHanSansCN-Bold-min.woff2);
-}
-
-@font-face {
     font-family: 'Helvetica Neue';
     font-weight: 400;
     font-style: normal;
