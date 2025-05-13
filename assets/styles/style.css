@@ -504,3 +504,66 @@ svg {
         fill: white;
     }
 }
+
+@font-face {
+    font-family: 'Monaspace Neon';
+    font-style: normal;
+    font-weight: 300;
+    src: url('https://raw.githubusercontent.com/githubnext/monaspace/main/fonts/webfonts/MonaspaceNeon-Regular.woff2') format('woff2');
+}
+
+#calculator-wrapper {
+    width: 310px;
+    height: 380px;
+    border-radius: 50px;
+    background-color: hsl(210, 21%, 85%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: calc(50% - 163px);
+    margin-top: calc(50vh - 258px);
+    margin-bottom: 50%;
+}
+
+#calculator {
+    display: grid;
+    grid-template-columns: fit-content(1em) fit-content(1em) fit-content(1em) fit-content(1em);
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+#calculator button {
+    font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 36px;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    border: none;
+    background-color: hsl(210, 21%, 98%);
+}
+
+#calculator button:hover {
+    background-color: hsl(210, 21%, 90%);
+}
+
+#calculator button:active {
+    background-color: hsl(210, 21%, 85%);
+}
+
+#screen {
+    width: 250px;
+    height: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 60px;
+    background-color: hsl(210, 21%, 98%);
+    margin-bottom: 10px;
+    font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 36px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
