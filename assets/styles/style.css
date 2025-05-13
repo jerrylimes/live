@@ -251,85 +251,299 @@ svg {
     height: 100vh;
 }
 
-/* index styles */
+/* live styles */
 
-#welcome-image {
-    width: 100%;
-    height: 100vh;
-    background-image: url(../images/index-intro.webp);
-    background-size: cover;
-    background-position: center center;
-    position: relative;
+@font-face {
+    font-family: 'Source Han Sans';
+    font-weight: normal;
+    src: url(../fonts/SourceHanSansCN-Regular-min.woff2);
 }
 
-#welcome-title {
-    width: 100%;
-    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 24px;
-    position: absolute;
-    bottom: 50px;
-    opacity: 0.5;
-    text-align: center;
-}
-
-#index-text-clause .text-n {
-    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    width: 50%;
-    margin-left: 25%;
-    text-align: center;
-    font-size: 22px;
-}
-
-.index-data {
-    display: flex;
-    flex-direction: column;
-}
-
-.index-data b {
-    font-size: 30px;
-}
-
-#index-notification {
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 30px;
-    height: 6em;
-    display: flex;
-    flex-direction: column;
-    border-radius: 15px;
-    padding: 10px;
-    background-color: hwb(0 100% 0%);
-    border: solid 1px hwb(209 58% 8%);
-    position: relative;
-}
-
-#index-notification button {
-    border: solid 1px hwb(209 58% 8%);
-    background-color: white;
+@font-face {
+    font-family: 'Source Han Sans';
     font-weight: bold;
-    border-radius: 5px;
-    position: absolute;
-    height: 30px;
+    src: url(../fonts/SourceHanSansCN-Bold-min.woff2);
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    font-style: normal;
+    src: url(../fonts/helvetica-neue-5/HelveticaNeueRoman.otf);
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-weight: 100;
+    font-style: normal;
+    src: url(../fonts/helvetica-neue-5/HelveticaNeueLight.otf);
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-weight: 700;
+    font-style: normal;
+    src: url(../fonts/helvetica-neue-5/HelveticaNeueBold.otf);
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-weight: 800;
+    font-style: normal;
+    src: url(../fonts/helvetica-neue-5/HelveticaNeueHeavy.otf);
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-weight: 900;
+    font-style: normal;
+    src: url(../fonts/helvetica-neue-5/HelveticaNeueBlack.otf);
+}
+
+@font-face {
+    font-family: 'Digital';
+    src: url(../fonts/DS-DIGII.TTF);
+}
+
+#content-unit svg {
+    height: 0.7em;
+}
+
+#return {
     width: 30px;
-    bottom: 10px;
-    right: 10px;
-    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 14px;
+    height: 30px;
+    position: fixed;
+    left: calc(5% + 90px);
+    top: 20px;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 0.2s;
+    border: solid 1px transparent;
+    background-color: rgba(238, 241, 244, 0.75);
+    backdrop-filter: blur(12px);
+    border-color: #6C91D9;
 }
 
-#index-notification button:hover {
-    background-color: hwb(209 58% 8%);
-}
-
-#index-notification svg {
+#return svg {
     height: 20px;
-    fill: hwb(209 58% 8%);
+    fill: #6C91D9;
 }
 
-#index-notification button:hover svg {
-    fill: white;
+#content-unit {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 80px;
+    overflow: hidden;
+}
+
+#text-n {
+    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    text-align: justify;
+}
+
+#news-entries {
+    width: 100%;
+    transition: all 0.2s;
+}
+
+#news-live {
+    width: 100%;
+    transition: all 0.2s;
+    display: flex;
+}
+
+.news-entry {
+    padding: 10px;
+    overflow: hidden;
+    transition: background-color 0.2s;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-entry::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    height: 1px;
+    width: calc(100% - 20px);
+    background-color: #6c90d990;
+}
+
+.news-entry:hover {
+    background-color: hsl(210, 21%, 85%);
+
+}
+
+#news-heading {
+    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.news-details {
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 10px;
+    border: solid 1px #6C91D9;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.news-date,
+.pinned {
+    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+.pinned {
+    display: flex;
+    align-items: center;
+}
+
+#wrapper {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#digital-clock {
+    font-family: 'Digital', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 42vh;
+}
+
+#horloge-second,
+#horloge-second-colon {
+    color: #adadad;
+}
+
+#today,
+#month {
+    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 50px;
+}
+
+@media (max-width: 430px) {
+    #live-grid {
+        flex-direction: column;
+    }
+
+    #news-entries,
+    #news-live {
+        width: 100%;
+    }
+
+    #digital-clock {
+        font-size: 20vw;
+    }
+
+    #hour,
+    #minute,
+    #horloge-second {
+        font-size: 20vw;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .news-entry:hover {
+        background-color: hsla(211, 13%, 52%, 0.5);
+    }
+
+    svg {
+        fill: white;
+    }
+}
+
+@font-face {
+    font-family: 'Monaspace Neon';
+    font-style: normal;
+    font-weight: 300;
+    src: url('https://raw.githubusercontent.com/githubnext/monaspace/main/fonts/webfonts/MonaspaceNeon-Regular.woff2') format('woff2');
+}
+
+#calculator-wrapper {
+    width: 310px;
+    height: 380px;
+    border-radius: 50px;
+    background-color: hsl(210, 21%, 85%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: calc(50% - 155px);
+    margin-top: 40px;
+}
+
+#calculator {
+    display: grid;
+    grid-template-columns: fit-content(1em) fit-content(1em) fit-content(1em) fit-content(1em);
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+#calculator button {
+    font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 36px;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    border: none;
+    background-color: hsl(210, 21%, 98%);
+}
+
+#calculator button:hover {
+    background-color: hsl(210, 21%, 90%);
+}
+
+#calculator button:active {
+    background-color: hsl(210, 21%, 85%);
+}
+
+#screen {
+    width: 250px;
+    height: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 60px;
+    background-color: hsl(210, 21%, 98%);
+    margin-bottom: 10px;
+    font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 36px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+    #calculator-wrapper {
+        background-color: hsl(210, 21%, 35%);
+    }
+
+    #calculator button,
+    #screen {
+        background-color: hsl(210, 21%, 45%);
+    }
+
+    #calculator button:hover {
+        background-color: hsl(210, 21%, 40%);
+    }
+
+    #calculator button:active {
+        background-color: hsl(210, 21%, 35%);
+    }
 }
