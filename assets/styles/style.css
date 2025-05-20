@@ -517,9 +517,9 @@ body {
         font-size: 20vw;
     }
 
-    #hour,
-    #minute,
-    #horloge-second {
+    #content-unit #hour,
+    #content-unit #minute,
+    #content-unit #horloge-second {
         font-size: 20vw;
     }
 }
