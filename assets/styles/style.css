@@ -659,3 +659,21 @@ body {
     box-shadow: none;
     scale: 98%;
 }
+
+#little-light {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#little-light-bulb {
+    width: 1em;
+    height: 1em;
+    background-color: orange;
+    border-radius: 1em;
+    margin-right: 10px;
+}
+
+#little-light b {
+    margin-right: 10px;
+}
