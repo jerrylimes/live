@@ -766,3 +766,23 @@ body {
     border-radius: 15px;
     background-color: white;
 }
+
+@media (prefers-color-scheme: dark) {
+
+    .player-buttons,
+    #player-song-info {
+        background-color: hwb(210 3% 69%);
+    }
+
+    #player-playlist {
+        background-color: hwb(210 3% 84%);
+    }
+
+    .player-buttons button:hover {
+        background-color: hwb(210 3% 74%);
+    }
+
+    .player-buttons button:active {
+        background-color: hwb(210 3% 79%);
+    }
+}
