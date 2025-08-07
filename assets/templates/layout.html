@@ -1,3 +1,8 @@
+<!--
+    Author: Jerry Li
+    Date: Jul 19 2025
+    Version: 1.0
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,103 +14,222 @@
     <script src="{{ url_for('static', filename='scripts/jquery-3.7.1.min.js') }}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=add,alternate_email,arrow_forward,calculate,exit_to_app,gavel,info,newspaper,open_in_new,pause,person_add,play_arrow,play_circle,published_with_changes,queue_music,schedule,science,skip_next,skip_previous,stop,web_stories" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=alternate_email,arrow_forward,chat,exit_to_app,favorite,gavel,history,home,info,lightbulb,live_tv,open_in_new,person_add,question_mark,science,web_stories" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header id="inno">
-        <div id="tools">
-            <div id="tool">
-                <a href="https://jerryly.top">
-                    <div id="home">
+    <header>
+        <div id="menu">
+            <div id="call">
+                <a href="https://jerryly.cn" id="logo-link">
+                    <div id="logo-wrapper">
                         <div id="logo"></div>
-                        <span class="tools-caption">You're viewing a page handcrafted by 李江源 Jerry Li</span>
                     </div>
                 </a>
-                <a href="mailto:jerrylovesapple@icloud.com" id="input-field-link">
-                    <input type="text" id="input-field" placeholder="@ write me an email">
-                </a>
-                <div id="little-clock">
-                    <span id="clock-text">
-                        <span id="hour"></span>:<span id="minute"></span></span>
-                    </span>
-                    <span class="tools-caption">current time in your region</span>
+                <div id="welcome">bonjour</div>
+            </div>
+            <div id="location-indicator">
+                <div>
+                    <a href="https://jerryly.cn" class="subdomain-link">
+                        <div class="subdomain" id="subdomain-1">
+                            <span>
+                                <span class="material-symbols-outlined">home</span>www
+                            </span>
+                            <p class="text-n">The main page of jerryly.cn.</p>
+                        </div>
+                    </a>
+                    <a href="https://demo.jerryly.cn" class="subdomain-link">
+                        <div class="subdomain" id="subdomain-3">
+                            <span>
+                                <span class="material-symbols-outlined">web_stories</span>demo
+                            </span>
+                            <p class="text-n">Live preview of projects I've been working on. Please only visit when
+                                advised to.
+                            </p>
+                        </div>
+                    </a>
                 </div>
-                <div id="contact">
-                    <span class="material-symbols-outlined">person_add</span>
-                    <span class="tools-caption">Available on <a href="https://github.com/jerrylovescheese">GitHub</a>,
-                        on <a href="https://x.com/jerrylovestweet">Twitter</a>, and <a
-                            href="https://www.linkedin.com/in/jiangyuan-li-051095327/">LinkedIn</a></span>
-                </div>
-                <div id="external-links">
-                    <span class="material-symbols-outlined">open_in_new</span>
-                    <span class="tools-caption">Follow external links at the <a href="https://live.jerryly.top">live</a>
-                        and
-                        <a href="https://blog.jerryly.top">blog</a> subdomains</span>
+                <div>
+                    <a href="https://blog.jerryly.cn" class="subdomain-link">
+                        <div class="subdomain" id="subdomain-2">
+                            <span>
+                                <span class="material-symbols-outlined">chat</span>blog
+                            </span>
+                            <p class="text-n">Jerry's blog that hasn't been updated for a year now.</p>
+                        </div>
+                    </a>
+                    <div class="subdomain" id="subdomain-4">
+                        <a href="https://old.jerryly.cn"><span>
+                                <span class="material-symbols-outlined">history</span>old
+                            </span></a>
+                        <p class="text-n">Contents that are published prior to 2025 and no longer maintained. Click to
+                            learn
+                            more.</p>
+                        <ul>
+                            <a href="https://old.jerryly.cn/pages/about">
+                                <li>
+                                    about
+                                    <span class="file-type">html file</span>
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </li>
+                            </a>
+                            <a href="https://old.jerryly.cn/pages/apple">
+                                <li>
+                                    apple
+                                    <span class="file-type">html file</span>
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </li>
+                            </a>
+                            <a href="https://old.jerryly.cn/pages/christmas">
+                                <li>
+                                    christmas
+                                    <span class="file-type">html file</span>
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </li>
+                            </a>
+                            <a href="https://old.jerryly.cn/pages/classical_ch">
+                                <li>
+                                    classical_ch
+                                    <span class="file-type">html file</span>
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </li>
+                            </a>
+                            <a href="https://old.jerryly.cn/pages/classical_ch_sh">
+                                <li>
+                                    classical_ch_sh
+                                    <span class="file-type">html file</span>
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </li>
+                            </a>
+                            <a href="https://old.jerryly.cn/pages/contact">
+                                <li>
+                                    contact
+                                    <span class="file-type">html file</span>
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </li>
+                            </a>
+                            <a href="https://old.jerryly.cn/pages/develop">
+                                <li>
+                                    develop
+                                    <span class="file-type">html file</span>
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </li>
+                            </a>
+                            <a href="https://old.jerryly.cn/pages/flashback">
+                                <li>
+                                    flashback
+                                    <span class="file-type">html file</span>
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </li>
+                            </a>
+                            <a href="https://old.jerryly.cn/pages/friends">
+                                <li>
+                                    friends
+                                    <span class="file-type">html file</span>
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </li>
+                            </a>
+                            <a href="https://old.jerryly.cn/pages/gallery">
+                                <li>
+                                    gallery
+                                    <span class="file-type">html file</span>
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </li>
+                            </a>
+                            <a href="https://old.jerryly.cn/pages/homemade_giftcard">
+                                <li>
+                                    homemade_giftcard
+                                    <span class="file-type">html file</span>
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </li>
+                            </a>
+                            <a href="https://old.jerryly.cn/pages/music">
+                                <li>
+                                    music
+                                    <span class="file-type">html file</span>
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </li>
+                            </a>
+                            <a href="https://old.jerryly.cn/pages/noticeboard">
+                                <li>
+                                    noticeboard
+                                    <span class="file-type">html file</span>
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </li>
+                            </a>
+                            <a href="https://old.jerryly.cn/pages/search">
+                                <li>
+                                    search
+                                    <span class="file-type">html file</span>
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </li>
+                            </a>
+                            <a href="https://old.jerryly.cn/pages/survey">
+                                <li>
+                                    survey
+                                    <span class="file-type">html file</span>
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </li>
+                            </a>
+                            <a href="https://old.jerryly.cn/pages/taylorswift">
+                                <li>
+                                    taylorswift
+                                    <span class="file-type">html file</span>
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            <div id="m-copyright">© Jerry's Studio 江源工作室 2019-2025</div>
         </div>
     </header>
-    <div id="backlight"></div>
+
     <main>
         {% block content %}{% endblock %}
     </main>
-    <footer id="copyright-info">
-        <p class="copyright-info" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a
-                property="dct:title" rel="cc:attributionURL" href="https://jerryly.top">The website
-                https://jerryly.top</a>
-            by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://jerryly.top">Jerry
-                Li</a> is licensed under <a href="https://creativecommons.org/licenses/by-nd/4.0/?ref=chooser-v1"
-                target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-ND 4.0 <img
-                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
-                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img
-                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
-                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img
-                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
-                    src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt=""></a></p>
-        <p class="copyright-info" id="footer-links">
-            <a href="mailto:jerrylovesapple@icloud.com">
-                <span class="material-symbols-outlined">alternate_email</span>
-            </a>
-            <a href="javascript:;" onclick="alert('Currently no items in test. Stay tuned!')">
-                <span class="material-symbols-outlined">science</span>
-            </a>
-            <a href="https://blog.jerryly.top/20240404.html">
-                <span class="material-symbols-outlined">gavel</span>
-            </a>
-        </p>
-    </footer>
+
     <script>
-        $('#inno').hover(function () {
-            if (!$('#tools').hasClass('expanded')) {
-                $('#tools').toggleClass('active');
+        $("#menu").click(() => {
+            $("#menu").addClass("expanded");
+            $("#content-unit").addClass("shifted");
+            $("#copyright-info").addClass("shifted");
+        });
+
+        $(document).click((e) => {
+            if (!e.target.closest("#menu")) {
+                $("#menu").removeClass("expanded");
+                $("#content-unit").removeClass("shifted");
+                $("#copyright-info").removeClass("shifted");
             }
         });
 
-        $('#tools').click(function () {
-            $('#tools').addClass('expanded');
-        });
-
-        $(document).click(function (event) {
-            if (!$(event.target).closest('#tools, #inno').length) {
-                $('#tools').removeClass('active');
-                $('#tools').removeClass('expanded');
-            }
-        });
-
-        function getTime() {
+        function updateWelcomeMsg() {
+            const welcomeMsg = document.getElementById("welcome");
             const now = new Date();
-            const now_hour = now.getHours().toString().padStart(2, "0");
-            const now_minute = now.getMinutes().toString().padStart(2, "0");
-            document.getElementById("hour").innerText = now_hour;
-            document.getElementById("minute").innerText = now_minute;
+            if (now.getHours < 5) {
+                welcomeMsg.innerText = "bonne nuit";
+            } else if (now.getHours < 18) {
+                welcomeMsg.innerText = "bonjour";
+            } else {
+                welcomeMsg.innerText = "bonsoir";
+            }
         }
-        setInterval(() => {
-            getTime();
-        }, 1000);
+
+        $(document).ready(updateWelcomeMsg);
+
+        $("#subdomain-4").click(() => {
+            $("#subdomain-1").toggleClass("shrink");
+            $("#subdomain-2").toggleClass("shrink");
+            $("#subdomain-3").toggleClass("shrink");
+            $(".subdomain-link").toggleClass("shrink");
+            $("#location-indicator").toggleClass("widen");
+            $("#m-copyright").toggleClass("hidden");
+        });
     </script>
 </body>
 
