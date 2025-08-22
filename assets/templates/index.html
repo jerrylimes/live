@@ -3,42 +3,40 @@
 {% block content %}
 
 <div id="content-unit">
-    <div class="index-block" id="index-block-1">
-        <h2>GPT-5 登场</h2>
-        <p class="text-n" id="text-n-1"><a href="./pages/gpt-5-ch.html">English</a></p>
-        <div class="i-b-container">
-            <p class="i-subtitle">
-                OpenAI 于今天凌晨在他们的夏季更新直播上发布了 GPT-5，他们的最新模型。
-            </p>
-            <p class="text-n">
-                <b>亮点一览:</b>
-            <ul>
-                <li><b>所有</b>用户都可以在本周开始体验 GPT-5</li>
-                <li>免费用户可体验与 GPT-5 发送有限的信息和文件，Plus用户限额更高，Pro用户没有限额</li>
-                <li>开发者可使用的 API 令牌价格与o3相等</li>
-                <li>开发者可使用的 API 模型为 GPT-5，GPT-5 mini 和 GPT-5 nano</li>
-                <li>GPT 更<b>聪明</b>了，从写邮件到软件开发速度更快，准确率更高</li>
-                <li>GPT 更<b>智能</b>了，不需要用户特别打开开关就知道调用深度思考</li>
-                <li>GPT 更<b>快</b>了，处理日常要求更敏捷，虽然 OpenAI 对此没有定量比较</li>
-                <li>GPT 更<b>自然</b>了，从写作到说话更像人类</li>
-                <li>GPT 更<b>安全</b>了，处理存在潜在危险的请求时会警告并解释为什么无法处理该请求</li>
-                <li>GPT 更<b>个性化</b>了，Plus 版用户可以调节信息气泡颜色，另添加和日历与邮件同步功能</li>
-            </ul>
-            </p>
-
-        </div>
-    </div>
-    <hr>
-    <div class="index-block" id="index-block-2">
-        <span class="i-subtitle">
-            <b>Public Displays of Self-Annihilation.</b> My fourth album of writings.
-        </span>
-        <p class="text-n">
-            Available <a href="./pages/collection.html">here</a> and on my WeChat publisher.
-        </p>
-    </div>
-    <div class="empty-box"></div>
+    <embed src="{{ url_for('static', filename='files/A-Beginner-1st-Edition.pdf') }}" type="application/pdf"
+        width="100%" height="600px" />
+    <p class="text-n">
+        This work is licensed under a <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank"
+            rel="noopener noreferrer">Creative Commons Attribution-NoDerivatives 4.0 International License (CC BY-ND
+            4.0)</a>. You may share this document unmodified, with proper credit. Copying, altering, or redistributing
+        it without attribution or in altered form is not permitted.
+    </p>
 </div>
 
+<div id="copyright-info">
+    <p class="copyright-info" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a
+            property="dct:title" rel="cc:attributionURL" href="https://jerryly.top">The website
+            https://jerryly.top</a>
+        by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://jerryly.top">Jerry
+            Li</a> is licensed under <a href="https://creativecommons.org/licenses/by-nd/4.0/?ref=chooser-v1"
+            target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-ND 4.0 <img
+                style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img
+                style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img
+                style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt=""></a></p>
+    <p class="copyright-info" id="footer-links">
+        <a href="mailto:jerrylovesapple@icloud.com">
+            <span class="material-symbols-outlined">alternate_email</span>
+        </a>
+        <a href="javascript:;" onclick="alert('Currently no items in test. Stay tuned!')">
+            <span class="material-symbols-outlined">science</span>
+        </a>
+        <a href="https://blog.jerryly.top/20240404.html">
+            <span class="material-symbols-outlined">gavel</span>
+        </a>
+    </p>
+</div>
 
 {% endblock %}
