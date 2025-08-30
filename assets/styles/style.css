@@ -369,3 +369,238 @@
 body {
     margin: 0;
 }
+
+/* news.html */
+
+.text-n {
+    font-family: 'Manrope', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#live-grid {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 54px;
+}
+
+.news-entries {
+    width: 100%;
+    transition: all 0.2s;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+}
+
+#news-live {
+    width: 100%;
+    transition: all 0.2s;
+}
+
+.news-entry {
+    padding: 10px;
+    overflow: hidden;
+    transition: background-color 0.2s;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-entry::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    height: 1px;
+    width: calc(100% - 20px);
+    background-color: hsl(30, 100%, 78%);
+}
+
+.news-entry:hover {
+    background-color: hsl(30, 100%, 78%);
+
+}
+
+.news-heading {
+    font-family: 'Libre Baskerville', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 22px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    display: block;
+}
+
+.news-details {
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 10px;
+    border: solid 1px #fff9f3;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.news-date,
+.pinned {
+    font-family: 'Libre Baskerville', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+.news-date {
+    font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    bottom: 6px;
+}
+
+.pinned {
+    display: flex;
+    align-items: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    .news-entry:hover {
+        background-color: hsl(220, 59%, 24%);
+    }
+}
+
+#digital-clock {
+    font-family: 'Digital', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 42vh;
+}
+
+#second,
+#second-colon {
+    color: #adadad;
+}
+
+#today,
+#month {
+    font-family: 'Digital', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 50px;
+}
+
+@media (max-width: 430px) {
+    #live-grid {
+        flex-direction: column;
+    }
+
+    .news-entries,
+    #news-live {
+        width: 100%;
+    }
+
+    .news-entries {
+        grid-template-columns: 1fr;
+    }
+
+    #digital-clock {
+        font-size: 20vw;
+    }
+
+    #hour,
+    #minute,
+    #second {
+        font-size: 20vw;
+    }
+}
+
+.news-entry a {
+    text-decoration: none;
+    color: hsl(30, 100%, 58%);
+}
+
+#content-unit .separator,
+.news-flash-msg {
+    font-size: 20px;
+    opacity: 0.5;
+    text-align: left !important;
+    margin-left: 10px !important;
+    margin-bottom: 0px;
+    padding-bottom: 4px;
+}
+
+.news-flash-msg {
+    margin: 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.news-marquee {
+    --speed: 18s;
+    /* lower = faster */
+    --gap: 2rem;
+    /* space between repeats */
+    --height: 2.25rem;
+    /* line height / container height */
+
+    position: relative;
+    overflow: hidden;
+    height: var(--height);
+    line-height: var(--height);
+    background: #f6f6f6;
+    border-radius: .75rem;
+    padding-inline: .5rem;
+    margin: 10px;
+    font-family: 'Libre Baskerville', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* optional soft fade edges */
+.news-marquee::before,
+.news-marquee::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 2rem;
+    height: 100%;
+    pointer-events: none;
+}
+
+.news-marquee::before {
+    left: 0;
+    background: linear-gradient(to right, #f6f6f6, transparent);
+}
+
+.news-marquee::after {
+    right: 0;
+    background: linear-gradient(to left, #f6f6f6, transparent);
+}
+
+.news-marquee__track {
+    display: inline-flex;
+    gap: var(--gap);
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee var(--speed) linear infinite;
+}
+
+/* duplicate content for seamless loop */
+.news-marquee__item {
+    display: inline-block;
+    padding-inline: .25rem;
+}
+
+/* pause on hover/focus */
+.news-marquee:hover .news-marquee__track,
+.news-marquee:focus-within .news-marquee__track {
+    animation-play-state: paused;
+}
+
+/* accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .news-marquee__track {
+        animation: none;
+    }
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+    /* because we duplicated content */
+}
