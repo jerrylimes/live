@@ -41,10 +41,16 @@
 
 #simple-list {
     height: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
     padding: 0px;
     color: white;
     transition: all 0.4s cubic-bezier(0, 1, 0, 1.05);
+}
+
+#simple-list::-webkit-scrollbar {
+    width: 0;
 }
 
 #simple {
@@ -143,6 +149,20 @@
     list-style: none;
     margin-left: 0;
     padding-left: 0;
+}
+
+@media (max-width: 1024px) {
+    .simple-list-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .file-type {
+        display: none;
+    }
+
+    .simple-list-list a li {
+        grid-template-columns: 1fr 1.5em !important;
+    }
 }
 
 .simple-list-list a {
