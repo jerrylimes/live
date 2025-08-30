@@ -1,27 +1,5 @@
 /*
  * Author: Jerry Li
- * Date: Jul 22 2025
- * Version: 17.0
- */
-
-@font-face {
-    font-family: 'Source Han Sans';
-    font-weight: normal;
-    font-style: normal;
-    src: url(../fonts/SourceHanSansCN-Regular-min.woff2);
-}
-
-@font-face {
-    font-family: 'Source Han Sans';
-    font-weight: bold;
-    font-style: normal;
-    src: url(../fonts/SourceHanSansCN-Bold-min.woff2);
-}
-
-/*
- * Author: Jerry Li
- * Date: Jul 22 2025
- * Version: 17.0
  */
 
 @font-face {
