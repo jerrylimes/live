@@ -370,6 +370,10 @@ body {
     margin: 0;
 }
 
+#link-wrapper a:nth-child(3) {
+    font-weight: bold;
+}
+
 /* news.html */
 
 .text-n {
