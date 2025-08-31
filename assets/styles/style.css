@@ -357,7 +357,6 @@
 
 #content-unit .text-n {
     font-size: 15px;
-    text-align: center;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -372,6 +371,16 @@ body {
 
 #link-wrapper a:nth-child(3) {
     font-weight: bold;
+}
+
+#content-unit {
+    margin-top: 54px;
+}
+
+/* index.html */
+
+#pdf-preview {
+    height: 70vh;
 }
 
 /* news.html */

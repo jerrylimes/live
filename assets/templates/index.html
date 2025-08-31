@@ -2,6 +2,16 @@
 
 {% block content %}
 
-<div id="content-unit"></div>
+<div id="content-unit">
+    <p class="text-n">can we be for real. no one cares what I write.</p>
+    <iframe id="pdf-preview" src="{{ url_for('static', filename='files/A-Beginner-1st-Edition.pdf') }}#toolbar=0" width="100%"
+        height="100%" style="border:none" title="Non-downloadable PDF Viewer"></iframe>
+    <p class="text-n">
+        This work is licensed under a <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank"
+            rel="noopener noreferrer">Creative Commons Attribution-NoDerivatives 4.0 International License (CC BY-ND
+            4.0)</a>. You may share this document unmodified, with proper credit. Copying, altering, or redistributing
+        it without attribution or in altered form is not permitted.
+    </p>
+</div>
 
 {% endblock %}
