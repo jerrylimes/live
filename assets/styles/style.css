@@ -309,14 +309,6 @@
     }
 }
 
-#content-unit hr {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    opacity: 0;
-}
-
 #index-block-2 {
     display: flex;
     flex-direction: column;
@@ -637,4 +629,47 @@ body {
     background-image: url(../images/IMG_3740.png);
     background-size: contain;
     border-radius: 10px;
+}
+
+#live-apple-event {
+    width: calc(100% - 60px);
+    height: 200px;
+    background-image: url("https://www.apple.com/newsroom/images/2025/09/september-2025-keynote/Apple-Fall-event-250909.jpg.branding-large_2x.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    margin-left: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#content-unit #live-countdown {
+    width: calc(100% - 60px);
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-left: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#live-countdown .text-n {
+    font-size: 20px;
+    margin: 0;
+}
+
+#pdf-preview {
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    border-radius: 20px;
+}
+
+.separator-hr {
+    width: calc(100% - 60px);
+    height: 1px;
+    border: none;
+    background-color: #eee;
+    margin: 30px;
 }

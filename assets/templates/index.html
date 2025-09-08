@@ -3,7 +3,18 @@
 {% block content %}
 
 <div id="content-unit">
-    <p class="text-n">can we be for real. no one cares what I write.</p>
+    <div id="live-apple-event"></div>
+    <div id="live-countdown">
+        <p class="text-n">Apple Event in
+            <b>
+                <span id="days"></span>
+                <span id="hours"></span>
+                <span id="minutes"></span>
+                <span id="seconds"></span>
+            </b>
+        </p>
+    </div>
+    <hr class="separator-hr">
     <iframe id="pdf-preview" src="{{ url_for('static', filename='files/A-Beginner-1st-Edition.pdf') }}#toolbar=0"
         width="100%" height="100%" style="border:none" title="Non-downloadable PDF Viewer"></iframe>
     <p class="text-n">
@@ -13,5 +24,38 @@
         it without attribution or in altered form is not permitted.
     </p>
 </div>
+
+<script>
+
+    function updateCountdown(targetTime, daysEntry, hoursEntry, minutesEntry, secondsEntry) {
+        const target = new Date(targetTime).getTime();
+        const now = new Date();
+        const remain = target - now;
+        let days = Math.floor(remain / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((remain % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((remain % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((remain % (1000 * 60)) / 1000);
+        if (days < 0) {
+            days = 0;
+        }
+        if (hours < 0) {
+            hours = 0;
+        }
+        if (minutes < 0) {
+            minutes = 0;
+        }
+        if (seconds < 0) {
+            seconds = 0;
+        }
+        document.getElementById(daysEntry).textContent = Math.abs(days) + " d";
+        document.getElementById(hoursEntry).textContent = Math.abs(hours) + " hr";
+        document.getElementById(minutesEntry).textContent = Math.abs(minutes) + " min";
+        document.getElementById(secondsEntry).textContent = Math.abs(seconds) + " sec";
+    }
+
+    setInterval(() => {
+        updateCountdown("September 9, 2025 13:00:00", "days", "hours", "minutes", "seconds");
+    }, 1000);
+</script>
 
 {% endblock %}
