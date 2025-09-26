@@ -4,9 +4,17 @@
 
 <div id="content-unit">
     <div id="showgirl">
-        <p class="text-n">
-            the following program is brought to you in living color on NBC.
-        </p>
+        <video autoplay muted loop playsinline id="showgirl-glitter">
+            <source src="https://media.jerryly.cn/hcdbt.mp4" type="video/mp4">
+        </video>
+        <div class="showgirl-countdown">
+            <span class="text-n"><b>The Life of a Showgirl</b><br>
+                <span id="days"></span>
+                <span id="hours"></span>
+                <span id="minutes"></span>
+                <span id="seconds"></span>
+            </span>
+        </div>
     </div>
     <hr class="separator-hr">
     <iframe id="pdf-preview" src="{{ url_for('static', filename='files/A-Beginner-1st-Edition.pdf') }}#toolbar=0"
@@ -48,7 +56,7 @@
     }
 
     setInterval(() => {
-        updateCountdown("September 9, 2025 13:00:00", "days", "hours", "minutes", "seconds");
+        updateCountdown("October 3, 2025 00:00:00", "days", "hours", "minutes", "seconds");
     }, 1000);
 </script>
 
