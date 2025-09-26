@@ -673,3 +673,10 @@ body {
     background-color: #eee;
     margin: 30px;
 }
+
+#showgirl {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/hcdbt.mp4);
+    background-size: contain;
+}
