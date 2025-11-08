@@ -1000,9 +1000,9 @@ body {
 @media (prefers-color-scheme: dark) {
     .current-time-colon .material-symbols-outlined {
         text-shadow:
-        -1px -1px 0 white,
-        1px -1px 0 white,
-        -1px 1px 0 white,
-        1px 1px 0 white;
+            -1px -1px 0 white,
+            1px -1px 0 white,
+            -1px 1px 0 white,
+            1px 1px 0 white;
     }
 }
