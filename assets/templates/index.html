@@ -6,7 +6,41 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap" rel="stylesheet">
 
+<style>
+    #handle-backdrop {
+        display: none;
+    }
+
+    #handle-content {
+        color: #fff0c9;
+    }
+
+    #handle-logo {
+        background-image: url(https://media.jerryly.cn/home-button-fff0c9.svg);
+    }
+
+    #handle-separator {
+        background-color: #fff0c9;
+    }
+
+    #handle.exited{
+        background-color: rgba(255, 255, 255, 0.4);
+        border-bottom-color: rgba(255, 255, 255, 0.4);
+    }
+
+    #handle-direct a:hover,
+    #handle-logo-wrapper:hover,
+    #basement-content-layer ul li:hover {
+        background-color: rgb(135, 25, 18);
+    }
+
+    .basement-circle {
+        background-image: radial-gradient(circle at top, #ffffff00 20%, rgb(193, 59, 30), rgb(135, 25, 18));
+    }
+</style>
+
 <div id="content-unit" class="index-page">
+
     <div id="current-time-wrapper">
         <div id="current-time">
             <span id="current-time-hour"></span>
@@ -19,8 +53,12 @@
             </div>
             <span id="current-time-second"></span>
         </div>
-        <span class="current-time-info">standby for the next big thing</span>
+        <span class="current-time-info">春到福来</span>
     </div>
+</div>
+
+<div id="cny-backdrop">
+
 </div>
 
 <script>
