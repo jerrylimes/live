@@ -270,6 +270,7 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
+    transform: scaleX(-1);
 }
 
 #index-block-1 {
