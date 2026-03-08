@@ -7,58 +7,35 @@
 <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap" rel="stylesheet">
 
 <div id="content-unit" class="index-page">
-
-    <!-- <div id="current-time-wrapper">
-        <span class="current-time-info">丙午马年还有</span>
+    <div id="current-time-wrapper">
         <div id="current-time">
-            <span id="current-time-day"></span>
-            <div class="current-time-colon">
-                <span class="current-time-info">天</span>
-                <span class="material-symbols-outlined">go_to_line</span>
-            </div>
             <span id="current-time-hour"></span>
             <div class="current-time-colon">
-                <span class="current-time-info">小时</span>
                 <span class="material-symbols-outlined">go_to_line</span>
             </div>
             <span id="current-time-minute"></span>
             <div class="current-time-colon">
-                <span class="current-time-info">分钟</span>
                 <span class="material-symbols-outlined">go_to_line</span>
             </div>
             <span id="current-time-second"></span>
-            <div class="current-time-colon">
-                <span class="current-time-info">秒</span>
-                <span class="material-symbols-outlined">go_to_line</span>
-            </div>
         </div>
-    </div> -->
+        <span class="current-time-info">国际妇女节快乐！</span>
+    </div>
 </div>
 
-<div id="cny-backdrop">
-
-</div>
+<div id="cny-backdrop"></div>
 
 <script>
-    const day = document.getElementById("current-time-day");
-    const hour = document.getElementById("current-time-hour");
-    const minute = document.getElementById("current-time-minute");
-    const second = document.getElementById("current-time-second");
-    const target = new Date("2026-02-17");
-    function countdown() {
+    const nowHour = document.getElementById("current-time-hour");
+    const nowMinute = document.getElementById("current-time-minute");
+    const nowSecond = document.getElementById("current-time-second");
+    function updateCurrentTime() {
         const now = new Date();
-        const daysLeft = Math.floor((target - now) / (1000 * 60 * 60 * 24));
-        const hoursLeft = Math.floor((target - now) % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
-        const minutesLeft = Math.floor((target - now) % (1000 * 60 * 60) / (1000 * 60));
-        const secondsLeft = Math.floor((target - now) % (1000 * 60) / 1000);
-        day.textContent = daysLeft.toString();
-        hour.textContent = hoursLeft.toString();
-        minute.textContent = minutesLeft.toString();
-        second.textContent = secondsLeft.toString();
+        nowHour.textContent = now.getHours().toString().padStart(2, "0");
+        nowMinute.textContent = now.getMinutes().toString().padStart(2, "0");
+        nowSecond.textContent = now.getSeconds().toString().padStart(2, "0");
     }
-    setInterval(() => {
-        countdown();
-    }, 1000);
+    setInterval(updateCurrentTime, 1000);
     if (window.innerWidth > 768) {
         $("#directory").toggleClass("active");
         $("#sitemap").toggleClass("expanded");

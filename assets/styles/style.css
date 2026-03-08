@@ -262,7 +262,7 @@ body {
 #cny-backdrop {
     width: 100%;
     height: 100vh;
-    background-image: url(https://media.jerryly.cn/%E6%96%B0%E6%98%A5%E5%BF%AB%E4%B9%90%E7%BD%91%E9%A1%B5_%E7%94%BB%E6%9D%BF-1.webp);
+    background-image: url(https://media.jerryly.cn/Untitled.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -821,7 +821,7 @@ body {
 
 .current-time-info {
     font-family: 'Inter', 'Source Han Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
 }
 
