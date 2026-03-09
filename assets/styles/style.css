@@ -801,13 +801,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    color: hsl(353, 100%, 39%);
-}
-
-@media (prefers-color-scheme: dark) {
-    #current-time-wrapper {
-        color: #fff0c9;
-    }
+    color: #fff0c9;
 }
 
 #current-time {
