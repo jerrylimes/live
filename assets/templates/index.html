@@ -10,14 +10,17 @@
     <div id="current-time-wrapper">
         <div id="current-time">
             <span id="current-time-hour"></span>
-            <div class="current-time-colon">
+            <span class="countdown-with-plain-text">days</span>
+            <!-- <div class="current-time-colon">
                 <span class="material-symbols-outlined">go_to_line</span>
-            </div>
+            </div> -->
             <span id="current-time-minute"></span>
-            <div class="current-time-colon">
+            <span class="countdown-with-plain-text">hours</span>
+            <!-- <div class="current-time-colon">
                 <span class="material-symbols-outlined">go_to_line</span>
-            </div>
+            </div> -->
             <span id="current-time-second"></span>
+            <span class="countdown-with-plain-text">minutes</span>
         </div>
         <!-- <span class="current-time-info">国际妇女节快乐！</span> -->
     </div>
@@ -26,21 +29,23 @@
 <div id="cny-backdrop"></div>
 
 <script>
-    const nowHour = document.getElementById("current-time-hour");
-    const nowMinute = document.getElementById("current-time-minute");
-    const nowSecond = document.getElementById("current-time-second");
-    function updateCurrentTime() {
+    const hour = document.getElementById("current-time-hour");
+    const minute = document.getElementById("current-time-minute");
+    const second = document.getElementById("current-time-second");
+    const target = new Date("2026-06-08T13:00:00");
+    function countdown() {
         const now = new Date();
-        nowHour.textContent = now.getHours().toString().padStart(2, "0");
-        nowMinute.textContent = now.getMinutes().toString().padStart(2, "0");
-        nowSecond.textContent = now.getSeconds().toString().padStart(2, "0");
+        const daysLeft = Math.floor((target - now) / (1000 * 60 * 60 * 24));
+        hour.textContent = daysLeft.toString();
+        now.getTime();
+        const hoursLeft = Math.floor((target - now) % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+        const minutesLeft = Math.floor((target - now) % (1000 * 60 * 60) / (1000 * 60));
+        minute.textContent = hoursLeft.toString();
+        second.textContent = minutesLeft.toString();
     }
-    setInterval(updateCurrentTime, 1000);
-    if (window.innerWidth > 768) {
-        $("#directory").toggleClass("active");
-        $("#sitemap").toggleClass("expanded");
-        $("#directory-expand").toggleClass("rotated");
-    }
+    setInterval(() => {
+        countdown();
+    }, 1000);
 </script>
 
 {% endblock %}
