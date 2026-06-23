@@ -1,26 +1,27 @@
-{% extends "page.html" %}
+{% extends "page.html" %} {% block content %}
 
-{% block content %}
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap"
+    rel="stylesheet"
+/>
 
 <div class="content-unit" class="index-page">
     <div id="current-time-wrapper">
         <div id="current-time">
             <span id="current-time-hour"></span>
-            <span class="countdown-with-plain-text">days</span>
+            <!--<span class="countdown-with-plain-text">days</span>-->
             <!-- <div class="current-time-colon">
                 <span class="material-symbols-outlined">go_to_line</span>
             </div> -->
             <span id="current-time-minute"></span>
-            <span class="countdown-with-plain-text">hours</span>
+            <!--<span class="countdown-with-plain-text">hours</span>-->
             <!-- <div class="current-time-colon">
                 <span class="material-symbols-outlined">go_to_line</span>
             </div> -->
             <span id="current-time-second"></span>
-            <span class="countdown-with-plain-text">minutes</span>
+            <!--<span class="countdown-with-plain-text">minutes</span>-->
         </div>
         <!-- <span class="current-time-info">国际妇女节快乐！</span> -->
     </div>
@@ -38,13 +39,26 @@
         const daysLeft = Math.floor((target - now) / (1000 * 60 * 60 * 24));
         hour.textContent = daysLeft.toString();
         now.getTime();
-        const hoursLeft = Math.floor((target - now) % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
-        const minutesLeft = Math.floor((target - now) % (1000 * 60 * 60) / (1000 * 60));
+        const hoursLeft = Math.floor(
+            ((target - now) % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        );
+        const minutesLeft = Math.floor(
+            ((target - now) % (1000 * 60 * 60)) / (1000 * 60),
+        );
         minute.textContent = hoursLeft.toString();
         second.textContent = minutesLeft.toString();
     }
+    function currentTime() {
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, "0");
+        const minutes = now.getMinutes().toString().padStart(2, "0");
+        const seconds = now.getSeconds().toString().padStart(2, "0");
+        hour.textContent = hours;
+        minute.textContent = minutes;
+        second.textContent = seconds;
+    }
     setInterval(() => {
-        countdown();
+        currentTime();
     }, 1000);
 </script>
 
