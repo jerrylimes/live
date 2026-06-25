@@ -30,22 +30,6 @@
     src: url(https://media.jerryly.cn/Doto-VariableFont_ROND%2Cwght.ttf);
 }
 
-/* styling for home page readability concerns */
-
-.counter-button,
-.counter-i,
-.counter-list {
-    color: white;
-}
-
-.counter-button:hover {
-    background-color: #333;
-}
-
-#copyright-info {
-    filter: invert(1);
-}
-
 /* index.html */
 
 #cny-backdrop {
@@ -162,21 +146,17 @@
     border-radius: 10px;
     margin-left: 20px;
     margin-right: 20px;
-    background-image: radial-gradient(
-        ellipse at top left,
-        #f4f4f4 0%,
-        rgba(0, 0, 0, 0) 20%
-    );
+    background-image: radial-gradient(ellipse at top left,
+            #f4f4f4 0%,
+            rgba(0, 0, 0, 0) 20%);
     border: solid 1px #f4f4f4;
 }
 
 @media (prefers-color-scheme: dark) {
     #index-block-2 {
-        background-image: radial-gradient(
-            ellipse at top left,
-            #242424 0%,
-            rgba(0, 0, 0, 0) 20%
-        ) !important;
+        background-image: radial-gradient(ellipse at top left,
+                #242424 0%,
+                rgba(0, 0, 0, 0) 20%) !important;
         border-color: #242424 !important;
     }
 }
@@ -749,7 +729,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
 }
 
 #current-time {
