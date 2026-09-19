@@ -1,0 +1,24 @@
+<div class="content-unit">
+    <div class="empty-box-half-height"></div>
+    <p class="text-n">Today's word is / 今天的单词是 / <span class="live-japanese">今日の単語は</span></p>
+    <h2 id="word-of-the-day"></h2>
+    <div class="empty-box"></div>
+</div>
+
+<script>
+    function randomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    async function readJSON() {
+        try {
+            const response = await fetch(`/static/files/myListOfWords.json`);
+            const data = await response.json();
+            const word = data[randomNumber(0, data.length - 1)].toLowerCase();
+            const wordElement = document.getElementById("word-of-the-day");
+            wordElement.textContent = word;
+        } catch (error) {
+            console.error('Error fetching or parsing JSON:', error);
+        }
+    }
+    readJSON();
+</script>
