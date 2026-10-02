@@ -71,35 +71,22 @@
     const length = path1.getTotalLength();
     for (const path of [path1, path2, path3, path4]) {
         path.style.fill = "none";
-        path.style.stroke = "lightgreen";
+        path.style.stroke = "transparent";
         path.style.strokeWidth = 3;
         path.style.strokeDasharray = length;
     }
-    path2.style.strokeDashoffset = -length / 2;
+    path2.style.strokeDasharray = length / 8;
     path2.style.stroke = "lightseagreen";
+    path2.style.strokeWidth = 1;
     path3.style.stroke = "cadetblue";
-    path4.style.strokeDasharray = length / 8;
     path3.style.strokeDasharray = length / 8;
-    path4.style.stroke = "limegreen";
-    anim1 = path1.animate(
-        [
-            { strokeDashoffset: length / 0.5 },
-            { strokeDashoffset: length }
-        ],
-        {
-            duration: 8000,
-            easing: "ease-in-out",
-            iterations: Infinity,
-            direction: "alternate"
-        }
-    );
     anim2 = path2.animate(
         [
-            { strokeDashoffset: -length * 1.5 },
-            { strokeDashoffset: -length }
+            { strokeDashoffset: -length * 2 },
+            { strokeDashoffset: -length / 8 }
         ],
         {
-            duration: 4000,
+            duration: 16000,
             easing: "ease-in-out",
             iterations: Infinity,
             direction: "alternate"
@@ -107,7 +94,7 @@
     );
     anim3 = path3.animate(
         [
-            { strokeDashoffset: -length / 2 },
+            { strokeDashoffset: -length / 8 },
             { strokeDashoffset: -length * 2 }
         ],
         {
@@ -117,18 +104,6 @@
             direction: "alternate"
         }
     );
-    anim4 = path4.animate(
-        [
-            { strokeDashoffset: -length / 2 },
-            { strokeDashoffset: -length }
-        ],
-        {
-            duration: 16000,
-            easing: "ease-in-out",
-            iterations: Infinity,
-            direction: "alternate"
-        }
-    )
 </script>
 
 <script>
